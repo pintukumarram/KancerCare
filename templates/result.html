@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/css/result.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="result-container">
+      <div class="result-card">
+        <h1 class="result-heading">Cancer Prediction Result</h1>
+        <div class="result-content">
+          <p>
+            <span class="label">Cancer Status:</span>
+            <span class="value">{{ cancer }}</span>
+          </p>
+          <p>
+            <span class="label">Cancer Stage:</span>
+            <span class="value">{{ stage }}</span>
+          </p>
+        </div>
+        <div class="result-actions">
+          <a href="/" class="button">Home</a>
+          <a href="/history" class="button">View History</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/js/scripts.js"></script>
+  </body>
+</html>

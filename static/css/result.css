@@ -1,0 +1,95 @@
+/* Result Page Styling */
+body {
+  background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
+  color: #ddd;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+.result-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.result-card {
+  background: linear-gradient(145deg, #222, #111);
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation: slide-in 0.8s ease-out;
+}
+
+.result-heading {
+  font-size: 1.8rem;
+  color: #00bcd4;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.result-content {
+  margin: 1rem 0;
+}
+
+.result-content p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.label {
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.value {
+  color: #fff;
+  font-weight: bold;
+}
+
+.result-actions {
+  margin-top: 2rem;
+}
+
+.result-actions .button {
+  display: inline-block;
+  background: #00bcd4;
+  color: #111;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.result-actions .button:hover {
+  background: #02a8c3;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Animation for card appearance */
+@keyframes slide-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

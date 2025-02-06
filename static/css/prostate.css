@@ -1,0 +1,137 @@
+/* General Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212; /* Dark background for the theme */
+  color: #e0e0e0; /* Light text for contrast */
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #1e88e5, #1565c0); /* Premium gradient */
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Main Content Styling */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+form.prediction-form {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a); /* Subtle gradient for form */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Form Input Styling */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #90caf9; /* Light blue for labels */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #1f1f1f; /* Input field background */
+  color: #e0e0e0; /* Light text for inputs */
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0 4px 10px rgba(30, 136, 229, 0.8);
+  transform: scale(1.02);
+}
+
+/* Button Styling */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #42a5f5, #1e88e5); /* Dynamic gradient */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  transform: translateY(-2px);
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #757575; /* Subtle text for footer */
+}
+
+/* Animations for Dynamic Effects */
+@keyframes glow {
+  0%, 100% {
+      box-shadow: 0 0 5px #42a5f5, 0 0 10px #1e88e5;
+  }
+  50% {
+      box-shadow: 0 0 15px #42a5f5, 0 0 20px #1e88e5;
+  }
+}
+
+input:focus {
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+.btn:hover {
+  animation: glow 1s infinite alternate ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 1.8rem;
+  }
+
+  form.prediction-form {
+      padding: 1.5rem;
+  }
+
+  .btn {
+      font-size: 1rem;
+  }
+}

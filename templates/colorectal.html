@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorectal Cancer Prediction</title>
+    <link rel="stylesheet" href="/static/css/colorectal.css">
+</head>
+<body>
+    <header>
+        <h1>Colorectal Cancer Prediction</h1>
+    </header>
+
+    <main>
+        <form class="prediction-form" action="/predict_colorectal" method="POST">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
+            </div>
+            <div class="form-group">
+                <label for="symptoms">Symptoms Description</label>
+                <input type="text" id="symptoms" name="symptoms" placeholder="Briefly describe your symptoms" required>
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cancer Prediction App. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KancerCare</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="logo">
+            <a href="#">Kancer~Care</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#types" class="nav-item">Cancer</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="static/images/breast_cancer.png" alt="Breast Cancer" />
+            <div class="caption">
+              <a href="/breast" class="btn">Breast Cancer</a>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="static/images/lungimg.png" alt="Lung Cancer" />
+            <div class="caption">
+              <a href="/lung" class="btn">Lung Cancer</a>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="static/images/prostate_cancer.png"
+              alt="Prostate Cancer"
+            />
+            <div class="caption">
+              <a href="/prostate" class="btn">Prostate Cancer</a>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="static/images/colorectal_cancer.png"
+              alt="Colorectal Cancer"
+            />
+            <div class="caption">
+              <a href="/colorectal" class="btn">Colorectal Cancer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <h2>ABOUT US</h2>
+      <p>
+        Our Cancer Prediction App uses state-of-the-art machine learning models
+        to predict the presence and stages of various types of cancer. With an
+        easy-to-use interface and accurate predictions, we aim to assist in
+        early detection and better treatment outcomes.
+      </p>
+    </section>
+
+    <!-- Types of Cancer Section -->
+    <section id="types" class="section types">
+      <h2>PREDICTION</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="static/images/breast_cancer.png" alt="Breast Cancer" />
+          <div class="card-content">
+            <h3>Breast Cancer</h3>
+            <p>Predict and analyze breast cancer stages effectively.</p>
+            <a href="/breast" class="btn">Explore</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="static/images/lungimg.png" alt="Lung Cancer" />
+          <div class="card-content">
+            <h3>Lung Cancer</h3>
+            <p>Advanced tools for lung cancer detection and prediction.</p>
+            <a href="/lung" class="btn">Explore</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="static/images/prostate_cancer.png" alt="Prostate Cancer" />
+          <div class="card-content">
+            <h3>Prostate Cancer</h3>
+            <p>Analyze and predict prostate cancer progression.</p>
+            <a href="/prostate" class="btn">Explore</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="static/images/colorectal_cancer.png"
+            alt="Colorectal Cancer"
+          />
+          <div class="card-content">
+            <h3>Colorectal Cancer</h3>
+            <p>Efficiently detect and manage colorectal cancer.</p>
+            <a href="/colorectal" class="btn">Explore</a>
+          </div>
+        </div>
+
+        <!-- Beep sound -->
+        <audio id="beep-sound" src="static/sounds/woosh-effect.mp3"></audio>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Cancer Prediction App. All Rights Reserved.</p>
+    </footer>
+    <script src="static/js/scripts.js" defer></script>
+  </body>
+</html>

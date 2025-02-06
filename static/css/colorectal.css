@@ -1,0 +1,137 @@
+/* General Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #101010; /* Slightly darker than prostate for variety */
+  color: #dcdcdc; /* Light gray for text */
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #26a69a, #00796b); /* Premium teal gradient */
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Main Content Styling */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+form.prediction-form {
+  background: linear-gradient(145deg, #161616, #1f1f1f); /* Slightly lighter inner gradient */
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 2px 5px rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Form Input Styling */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #80cbc4; /* Light teal for labels */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: #1b1b1b; /* Dark gray for inputs */
+  color: #e0e0e0;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0 4px 12px rgba(38, 166, 154, 0.8); /* Teal glow effect */
+  transform: scale(1.02);
+}
+
+/* Button Styling */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4db6ac, #26a69a); /* Teal gradient for buttons */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #26a69a, #00796b); /* Darker teal gradient on hover */
+  transform: translateY(-2px);
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #757575;
+}
+
+/* Animations for Dynamic Effects */
+@keyframes glow {
+  0%, 100% {
+      box-shadow: 0 0 6px #4db6ac, 0 0 12px #26a69a;
+  }
+  50% {
+      box-shadow: 0 0 18px #4db6ac, 0 0 24px #26a69a;
+  }
+}
+
+input:focus {
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+.btn:hover {
+  animation: glow 1.2s infinite alternate ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 1.8rem;
+  }
+
+  form.prediction-form {
+      padding: 1.5rem;
+  }
+
+  .btn {
+      font-size: 1rem;
+  }
+}
