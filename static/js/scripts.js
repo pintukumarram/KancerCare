@@ -1,74 +1,53 @@
+// Card hover glow and sound
 document.querySelectorAll(".card").forEach((card) => {
+  const audio = new Audio("static/sounds/woosh-effect.mp3");
+
   card.addEventListener("mouseenter", () => {
     card.style.boxShadow = "0 10px 30px rgba(255, 87, 34, 0.4)";
+    audio.currentTime = 0;
+    audio.play();
   });
+
   card.addEventListener("mouseleave", () => {
-    card.style.boxShadow =
-      "5px 5px 15px rgba(0, 0, 0, 0.4), -5px -5px 15px rgba(255, 255, 255, 0.1)";
+    card.style.boxShadow = "5px 5px 15px rgba(0, 0, 0, 0.4), -5px -5px 15px rgba(255, 255, 255, 0.1)";
+    audio.pause();
+    audio.currentTime = 0;
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
-  const audio = new Audio("static/sounds/woosh-effect.mp3"); // Ensure this path is correct
-
-  cards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      // Play the sound when hovering
-      audio.currentTime = 0; // Reset to the start
-      audio.play();
-    });
-
-    card.addEventListener("mouseleave", () => {
-      // Optionally, stop the sound when leaving the card
-      audio.pause();
-      audio.currentTime = 0; // Reset for the next hover
-    });
-  });
-});
-
-// JavaScript for pause on hover effect
+// Pause/resume carousel on hover
 document.addEventListener("DOMContentLoaded", () => {
   const carouselTrack = document.querySelector(".carousel-track");
-  let isPaused = false;
-
-  // Pause animation on hover
   carouselTrack.addEventListener("mouseenter", () => {
-    isPaused = true;
     carouselTrack.style.animationPlayState = "paused";
   });
-
-  // Resume animation when not hovering
   carouselTrack.addEventListener("mouseleave", () => {
-    isPaused = false;
     carouselTrack.style.animationPlayState = "running";
   });
 });
 
-// Smooth Scroll and Active Link
+// Smooth scroll & active navbar highlight
 document.addEventListener("DOMContentLoaded", () => {
   const navItems = document.querySelectorAll(".nav-item");
   const sections = document.querySelectorAll("section");
 
-  // Smooth Scroll
   navItems.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
-      const targetSection = document.querySelector(item.getAttribute("href"));
+      const target = document.querySelector(item.getAttribute("href"));
       window.scrollTo({
-        top: targetSection.offsetTop - 60, // Offset for navbar height
+        top: target.offsetTop - 60,
         behavior: "smooth",
       });
     });
   });
 
-  // Highlight Active Link
   window.addEventListener("scroll", () => {
-    let scrollPosition = window.scrollY;
+    let scrollY = window.scrollY;
     sections.forEach((section, index) => {
       if (
-        scrollPosition >= section.offsetTop - 70 &&
-        scrollPosition < section.offsetTop + section.offsetHeight
+        scrollY >= section.offsetTop - 70 &&
+        scrollY < section.offsetTop + section.offsetHeight
       ) {
         navItems.forEach((item) => item.classList.remove("active"));
         navItems[index].classList.add("active");
@@ -77,11 +56,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Button click sound
 document.addEventListener("DOMContentLoaded", () => {
   const predictButton = document.querySelector(".submit-button");
-  const sound = new Audio("/static/sounds/click.wav");
+  const clickSound = new Audio("/static/sounds/click.wav");
 
   predictButton.addEventListener("click", () => {
-    sound.play();
+    clickSound.play();
   });
+});
+
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    color: { value: "#00bcd4" },
+    shape: { type: "circle" },
+    opacity: { value: 0.3 },
+    size: { value: 4 },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#00bcd4",
+      opacity: 0.2,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      out_mode: "bounce"
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "repulse" }
+    }
+  }
 });

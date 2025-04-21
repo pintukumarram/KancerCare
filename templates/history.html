@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="/static/css/history.css">
+</head>
+<body>
+    <header>
+        <h1>Your Prediction History</h1>
+    </header>
+
+    <main>
+        {% if history %}
+            <table>
+                <tr>
+                    <th>Cancer Type</th>
+                    <th>Input Data</th>
+                    <th>Prediction</th>
+                    <th>Date</th>
+                </tr>
+                {% for entry in history %}
+                <tr>
+                    <td>{{ entry.cancer_type }}</td>
+                    <td>{{ entry.input_data }}</td>
+                    <td>{{ entry.prediction_result }}</td>
+                    <td>{{ entry.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No prediction history found.</p>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cancer Prediction App. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
